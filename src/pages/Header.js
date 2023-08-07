@@ -17,7 +17,7 @@ export default function Header() {
       <header className="App-header">
         <div>
             <h1>Hello, World!</h1>
-            <p>This is my first React component.</p>
+            <p>This is my first React component test.</p>
         </div>
       </header>
     </div>

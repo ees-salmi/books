@@ -41,7 +41,7 @@ function ProductCard(props) {
             </InputGroup>
             </Col>
             <Col lg={2} sm={12} style={{margin:'3px'}}>
-            <Button id="basic-addon1" style={{width:'2cm',fontSize:'11px'}}>commander</Button>
+            <Button className='btn-success' id="basic-addon1" >commander</Button>
             </Col>
           </Row>
         </Container>

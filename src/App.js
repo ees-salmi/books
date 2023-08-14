@@ -1,19 +1,50 @@
 
+import NavBar from '../src/pages/NavBar';
+import ProductCard from '../src/pages/ProductCard';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import { useState,useEffect } from 'react';
+import axios from "axios";
+
+
 import './App.css';
+import React from 'react';
 
 
 function App() {
+
+ 
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.get('https://fakestoreapi.com/products');
+      setData(response.data);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <header className="App-header">
-          <div>
-              <h1>Hello, World! start here</h1>
-              <p>This is my first React component.</p>
-              <input type="text" placeholder='taype your name here'></input>
-          </div>
-        </header>
-      </header>
+        <NavBar />
+        {/* <ProductCard title={title} description={description} price = {price}></ProductCard> */}
+        {data.map(item => (
+        <><Container style={{marginTop:'10px'}}>
+            <Row>
+              <Col><ProductCard key={item.id} title={item.title} description={item.description} price={item.price} image={item.image}>{item.name}</ProductCard></Col>
+              <Col><ProductCard key={item.id} title={item.title} description={item.description} price={item.price} image={item.image}>{item.name}</ProductCard></Col>
+              <Col><ProductCard key={item.id} title={item.title} description={item.description} price={item.price} image={item.image}>{item.name}</ProductCard></Col>
+            </Row>
+          </Container>
+        </>
+      ))}
     </div>
   );
 }

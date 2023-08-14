@@ -1,27 +1,35 @@
 import React from 'react';
 
-
-// const Hello = () => {
-//   return (
-//     <div>
-//       <h1>Hello, World!</h1>
-//       <p>This is my first React component.</p>
-//     </div>
-//   );
-// }
-
-
-export default function Header() {
+const Navbar = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <div>
-            <h1>Hello, World!</h1>
-            <p>This is my first React component test.</p>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <div className="container">
+        <a className="navbar-brand" href="#">My Website</a>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ml-auto">
+            <li className="nav-item active">
+              <a className="nav-link" href="#">Home</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">About</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">Services</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
         </div>
-      </header>
-    </div>
+      </div>
+    </nav>
   );
-}
+};
+
+export default Navbar;
+
 
 

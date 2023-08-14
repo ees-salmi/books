@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+#logo-text{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size:xx-large
+}

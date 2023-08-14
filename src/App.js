@@ -38,10 +38,10 @@ function App() {
         {data.map(item => (
         <><Container style={{marginTop:'10px'}}>
             <Row>
-              <Col sm={12}><ProductCard key={item.id} title={item.title} description={item.description} price={item.price} image={item.image}>{item.name}</ProductCard></Col>
-              <Col  sm={12}><ProductCard key={item.id} title={item.title} description={item.description} price={item.price} image={item.image}>{item.name}</ProductCard></Col>
-              <Col  sm={12}><ProductCard key={item.id} title={item.title} description={item.description} price={item.price} image={item.image}>{item.name}</ProductCard></Col>
-              <Col  sm={12}><ProductCard key={item.id} title={item.title} description={item.description} price={item.price} image={item.image}>{item.name}</ProductCard></Col>
+              <Col style={{marginTop:'10px'}} lg={3} sm={12}><ProductCard key={item.id} title={item.title} description={item.description} price={item.price} image={item.image}>{item.name}</ProductCard></Col>
+              <Col style={{marginTop:'10px'}} lg={3} sm={12}><ProductCard key={item.id} title={item.title} description={item.description} price={item.price} image={item.image}>{item.name}</ProductCard></Col>
+              <Col style={{marginTop:'10px'}} lg={3} sm={12}><ProductCard key={item.id} title={item.title} description={item.description} price={item.price} image={item.image}>{item.name}</ProductCard></Col>
+              <Col style={{marginTop:'10px'}} lg={3} sm={12}><ProductCard key={item.id} title={item.title} description={item.description} price={item.price} image={item.image}>{item.name}</ProductCard></Col>
             </Row>
           </Container>
         </>

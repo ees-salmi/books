@@ -18,18 +18,18 @@ function NavBar() {
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#link">Produit</Nav.Link>
             <Button className='btn-success' placeholder='ecrire ici'> Promotions</Button>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+            <NavDropdown title="choix" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Montessori</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
-                Another action
+                Logic
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
-                test
+                Maths
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
-                Separated link
+                imagination
               </NavDropdown.Item>
             </NavDropdown>
           </Nav><InputGroup >
@@ -40,6 +40,7 @@ function NavBar() {
                 aria-describedby="basic-addon1"
             />
             </InputGroup>
+            <Button className='btn-warning' > Login</Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>

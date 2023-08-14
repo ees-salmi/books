@@ -11,6 +11,18 @@ function ProductCard(props) {
   return (
     <Card>
       <Card.Img variant="top" src={props.image} />
+      <Button
+        variant="info"
+        size="sm"
+        style={{
+          position: 'absolute',
+          top: '10px',
+          right: '10px',
+          zIndex: 1, // To make sure the button appears above the image
+        }}
+      >
+        {props.price} dh
+      </Button>
       <Card.Body>
         <Card.Title>{props.title}</Card.Title>
         <Card.Text>
@@ -18,17 +30,19 @@ function ProductCard(props) {
         </Card.Text>
         <Container>
           <Row>
-            <Col lg={9}>
+            
+            <Col lg={10} sm={12}>
             <InputGroup >
-            <InputGroup.Text id="basic-addon1">commander</InputGroup.Text>
             <Form.Control
-                placeholder="numero telephone"
+                placeholder="Numero telephone"
                 aria-label="produit"
                 aria-describedby="basic-addon1"
             />
             </InputGroup>
             </Col>
-            <Col lg={3}><Button variant="success">{props.price} dh</Button></Col>
+            <Col lg={2} sm={12} style={{margin:'3px'}}>
+            <Button id="basic-addon1" style={{width:'2cm',fontSize:'11px'}}>commander</Button>
+            </Col>
           </Row>
         </Container>
       </Card.Body>

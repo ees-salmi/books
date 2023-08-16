@@ -1,22 +1,18 @@
-
 import NavBar from '../src/pages/NavBar';
-import ProductCard from '../src/pages/ProductCard';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import { useState,useEffect } from 'react';
+import { Switch as Routes ,Route, Router,withRouter } from 'react-router-dom';
+
+import { useEffect,useState } from 'react';
 import axios from "axios";
-
-
 import './App.css';
 import React from 'react';
+import AllProducts from '../src/pages/AllProducts';
+import ProductDetails from '../src/pages/ProductDetails';
 
 
 function App() {
 
- 
-
   const [data, setData] = useState([]);
+  const [product,setProduct] = useState();
 
   useEffect(() => {
     fetchData();
@@ -26,6 +22,7 @@ function App() {
     try {
       const response = await axios.get('https://fakestoreapi.com/products');
       setData(response.data);
+      setProduct(data[0]);
     } catch (error) {
       console.error('Error fetching data:', error);
     }
@@ -33,19 +30,7 @@ function App() {
 
   return (
     <div className="App">
-        <NavBar />
-        {/* <ProductCard title={title} description={description} price = {price}></ProductCard> */}
-        {data.map(item => (
-        <><Container style={{marginTop:'10px'}}>
-            <Row>
-              <Col style={{marginTop:'10px'}} lg={3} sm={12}><ProductCard key={item.id} title={item.title} description={item.description} price={item.price} image={item.image}>{item.name}</ProductCard></Col>
-              <Col style={{marginTop:'10px'}} lg={3} sm={12}><ProductCard key={item.id} title={item.title} description={item.description} price={item.price} image={item.image}>{item.name}</ProductCard></Col>
-              <Col style={{marginTop:'10px'}} lg={3} sm={12}><ProductCard key={item.id} title={item.title} description={item.description} price={item.price} image={item.image}>{item.name}</ProductCard></Col>
-              <Col style={{marginTop:'10px'}} lg={3} sm={12}><ProductCard key={item.id} title={item.title} description={item.description} price={item.price} image={item.image}>{item.name}</ProductCard></Col>
-            </Row>
-          </Container>
-        </>
-      ))}
+      <ProductDetails product={product} ></ProductDetails>
     </div>
   );
 }

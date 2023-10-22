@@ -1,4 +1,4 @@
-import { Button } from 'react-bootstrap';
+import { Badge, Button } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -32,7 +32,8 @@ function NavBar() {
                 imagination
               </NavDropdown.Item>
             </NavDropdown>
-          </Nav><InputGroup >
+          </Nav>
+            <InputGroup >
             <InputGroup.Text id="basic-addon1">chercher</InputGroup.Text>
             <Form.Control
                 placeholder="chercher produit"
@@ -40,7 +41,13 @@ function NavBar() {
                 aria-describedby="basic-addon1"
             />
             </InputGroup>
-            <Button className='btn-warning' > Login</Button>
+            <Button className='btn-info m-2'>
+              cart
+              
+              <span className="badge text-bg-secondary" style={{position:"absolute",top:"15px", right:"120px"}}>2</span>
+              
+            </Button>
+            <Button className='btn-warning'  > Login</Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>

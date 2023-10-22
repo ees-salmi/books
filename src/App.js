@@ -1,12 +1,15 @@
 import NavBar from '../src/pages/NavBar';
 import { Switch as Routes ,Route, Router,withRouter } from 'react-router-dom';
-
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import { useEffect,useState } from 'react';
 import axios from "axios";
 import './App.css';
 import React from 'react';
 import AllProducts from '../src/pages/AllProducts';
 import ProductDetails from '../src/pages/ProductDetails';
+import SideBar from './pages/SideBar';
 
 
 function App() {
@@ -16,13 +19,17 @@ function App() {
 
   useEffect(() => {
     fetchData();
+    setProduct(data[0]);
+    console.log(data);
+    setProduct(data[0]);
+    console.log(data[0]);
+    
   }, []);
 
   const fetchData = async () => {
     try {
       const response = await axios.get('https://fakestoreapi.com/products');
       setData(response.data);
-      setProduct(data[0]);
     } catch (error) {
       console.error('Error fetching data:', error);
     }
@@ -30,7 +37,18 @@ function App() {
 
   return (
     <div className="App">
-      <ProductDetails product={product} ></ProductDetails>
+      <NavBar />
+      <Container>
+        <Row>
+          <Col xs={12} lg={2} md={6}>
+            <SideBar/>
+          </Col>
+          <Col xs={12} lg={10} md={6}>
+            <AllProducts />
+          </Col>
+        </Row>
+      </Container>
+      
     </div>
   );
 }

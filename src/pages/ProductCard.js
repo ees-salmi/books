@@ -30,16 +30,6 @@ function ProductCard(props) {
         </Card.Text>
         <Container>
           <Row>
-            
-            <Col lg={10} sm={12}>
-            <InputGroup >
-            <Form.Control
-                placeholder="Numero telephone"
-                aria-label="produit"
-                aria-describedby="basic-addon1"
-            />
-            </InputGroup>
-            </Col>
             <Col lg={2} sm={12} style={{margin:'3px'}}>
             <Button className='btn-success' id="basic-addon1" >commander</Button>
             </Col>

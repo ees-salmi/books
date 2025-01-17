@@ -18,9 +18,7 @@ function App() {
   useEffect(() => {
     fetchData();
     setProduct(data[0]);
-    console.log(data);
-    setProduct(data[0]);
-    console.log(data[0]);
+    console.log(product);
     
   }, [data]);
 

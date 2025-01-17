@@ -1,5 +1,4 @@
 import NavBar from '../src/pages/NavBar';
-import { Switch as Routes ,Route, Router,withRouter } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -8,7 +7,6 @@ import axios from "axios";
 import './App.css';
 import React from 'react';
 import AllProducts from '../src/pages/AllProducts';
-import ProductDetails from '../src/pages/ProductDetails';
 import SideBar from './pages/SideBar';
 
 

@@ -9,13 +9,6 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Form from 'react-bootstrap/Form';
   
 const  ProductDetails = ({dish,dishes}) => {
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
-    //console.log(dish.image);
-    const imgs = ["img","dishes[1].image","dishes[2].image"] ;
-    console.log(imgs[0]);
-    const imageUrls = ['https://mylittlestore.ma/wp-content/uploads/2021/04/Trotinette_3801006010744.jpg', 'https://mytoys.co.ma/wp-content/uploads/2020/06/71fTaKaHntL._AC_SL1500_.jpg'];
-    
-    const [image , setImage] = useState();
     useEffect(() => {
        // setImage(dish.image);
         
@@ -63,13 +56,6 @@ const  ProductDetails = ({dish,dishes}) => {
         )
     }
 
-    const images = () => {
-
-    }
-
-    const changeImage = (index) => {
-        setCurrentImageIndex(index);
-      };
     
     if(dish != null)
         return(

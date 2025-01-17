@@ -13,7 +13,7 @@ import SideBar from './pages/SideBar';
 function App() {
 
   const [data, setData] = useState([]);
-  const [product,setProduct] = useState();
+  const [product, setProduct] = useState(null);
 
   useEffect(() => {
     fetchData();
@@ -22,7 +22,7 @@ function App() {
     setProduct(data[0]);
     console.log(data[0]);
     
-  }, []);
+  }, [data]);
 
   const fetchData = async () => {
     try {

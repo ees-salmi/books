@@ -34,7 +34,7 @@ function NavBar() {
             </NavDropdown>
           </Nav>
             <InputGroup >
-            <InputGroup.Text id="basic-addon1">chercher</InputGroup.Text>
+            <InputGroup.Text id="basic-addon1">cherchers</InputGroup.Text>
             <Form.Control
                 placeholder="chercher produit"
                 aria-label="produit"

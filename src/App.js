@@ -13,12 +13,9 @@ import SideBar from './pages/SideBar';
 function App() {
 
   const [data, setData] = useState([]);
-  const [product, setProduct] = useState(null);
 
   useEffect(() => {
     fetchData();
-    setProduct(data[0]);
-    console.log(product);
     
   }, [data]);
 
